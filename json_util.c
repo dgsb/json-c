@@ -10,6 +10,7 @@
  */
 
 #include "config.h"
+// XXX
 #undef realloc
 
 #include <stdio.h>

@@ -51,3 +51,4 @@
 *.o
 /libjson-c.la
 /libjson.la
+build/
