@@ -10,6 +10,10 @@ include(CheckFunctionExists)
 set(json-c_VERSION_MAJOR 0)
 set(json-c_VERSION_MINOR 11)
 set(json-c_VERSION_PATCHLEVEL 99)
+set(json-c_VERSION ${json-c_VERSION_MAJOR}.${json-c_VERSION_MINOR}.${json-c_VERSION_PATCHLEVEL})
+set(json-c_PACKAGE_NAME "JSON C Library")
+set(json-c_PACKAGE_TARNAME json-c)
+set(json-c_PACKAGE_BUGREPORT "json-c@googlegroups.com")
 
 #
 # Platform specificities configuration
