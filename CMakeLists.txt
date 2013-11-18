@@ -73,8 +73,8 @@ configure_file(config.h.cmake config.h)
 configure_file(json_config.h.cmake json_config.h)
 include_directories(${CMAKE_BINARY_DIR})
 
-add_library(json SHARED 
-            arraylist.c
+
+set(SRCS    arraylist.c
             debug.c
             json_c_version.c
             json_object.c
@@ -83,4 +83,10 @@ add_library(json SHARED
             json_util.c
             linkhash.c
             printbuf.c)
+
+add_library(json SHARED ${SRCS})
+add_library(json_static STATIC ${SRCS})
+set_target_properties(json_static PROPERTIES OUTPUT_NAME json)
+install(TARGETS json json_static EXPORT JsoncTargets DESTINATION lib)
+install(EXPORT JsoncTargets DESTINATION lib/cmake)
 
